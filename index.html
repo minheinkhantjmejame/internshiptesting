@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Application</title>
+    <link rel="icon" href="./img/imgone.jpg" type="image/jpg" sizes = "16×16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/imgone.jpg" alt="Company Logo" width="50" height="50">
+                Lion Myanmar National Software Company
+            </a>
+            <div class="ml-auto">
+                <a href="https://facebook.com" class="nav-link d-inline"><i class="fa-brands fa-facebook"  style="color: black;"></i></a>
+                <a href="https://instagram.com" class="nav-link d-inline"><i class="fab fa-instagram"  style="color: black;"></i></a>
+                <a href="https://linkedin.com" class="nav-link d-inline"><i class="fab fa-linkedin"  style="color: black;"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center my-5">
+        <h1>Our company is calling enthusiastic students like you!</h1>
+        <button type="button" class="apply btn mt-3" data-toggle="modal" data-target="#applicationModal">Apply Now</button>
+    </div>
+
+    <footer class=" text-center py-3">
+        <p><strong>Main Office Location:</strong> Myanmar, Yangon, Nay Pyi Daw</p>
+        <p><strong>Contact Us:</strong><i class="fas fa-phone"> </i> <a href="#">+959888614578</a> <i class="fas fa-envelope-open-text"> </i> <a href="#">lionmyanmarcompany@gmail.com</a></p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="applicationModal" tabindex="-1" aria-labelledby="applicationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applicationModalLabel">Internship Application</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="step-indicators mb-3">
+                        <div class="step active" id="step1">1</div>
+                        <div class="step" id="step2">2</div>
+                        <div class="step" id="step3">3</div>
+                    </div>
+                    <form id="applicationForm" method="post" enctype="multipart/form-data" action="submit_application.php">
+                        <!-- Step 1 -->
+                        <div class="form-step active" id="formStep1">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="mobile">Mobile No.</label>
+                                    <input type="text" class="form-control" id="mobile" name="mobile" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="nickname">Nickname</label>
+                                    <input type="text" class="form-control" id="nickname" name="nickname">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="bloodType">Blood Type</label>
+                                    <input type="text" class="form-control" id="bloodType" name="blood_type">
+                                </div>
+                            </div>
+                            <button type="button" class="btn" id="nextStep1">Next</button>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="form-step" id="formStep2">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="lineID">Line ID</label>
+                                    <input type="text" class="form-control" id="lineID" name="line_id">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="university">University</label>
+                                    <input type="text" class="form-control" id="university" name="university" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="qualification">Qualification</label>
+                                    <input type="text" class="form-control" id="qualification" name="qualification" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="fieldOfStudy">Field of Study</label>
+                                    <select class="form-control" id="fieldOfStudy" name="field_of_study" required>
+                                        <option value="">Select Field of Study</option>
+                                        <option value="IT">IT</option>
+                                        <option value="HR">HR</option>
+                                        <option value="Accounting">Accounting</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="gpa">GPA</label>
+                                    <input type="text" class="form-control" id="gpa" name="gpa" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="resume">Resume</label>
+                                    <input type="file" class="form-control" id="resume" name="resume" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="internshipRole">Internship Role</label>
+                                    <select class="form-control" id="internshipRole" name="internship_role" required>
+                                        <option value="">Select Role</option>
+                                        <option value="IT Specialist">IT Specialist</option>
+                                        <option value="HR Trainee">HR Trainee</option>
+                                        <option value="Accountant Trainee">Accountant Trainee</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="internshipStart">Internship Start</label>
+                                    <input type="date" class="form-control" id="internshipStart" name="internship_start" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="internshipEnd">Internship End</label>
+                                    <input type="date" class="form-control" id="internshipEnd" name="internship_end" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn" id="prevStep2">Previous</button>
+                            <button type="button" class="btn" id="nextStep2">Next</button>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="form-step" id="formStep3">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="reason">Reason</label>
+                                    <select class="form-control" id="reason" name="reason" required>
+                                        <option value="">Select Reason</option>
+                                        <option value="University Compulsory">University Compulsory</option>
+                                        <option value="Voluntary">Voluntary</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="swot">SWOT</label>
+                                    <textarea class="form-control" id="swot" name="swot" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="knowProgram">How did you know about our internship program?</label>
+                                    <select class="form-control" id="knowProgram" name="know_program" required>
+                                        <option value="">Select Option</option>
+                                        <option value="Facebook">Facebook</option>
+                                        <option value="Instagram">Instagram</option>
+                                        <option value="Friend Recommendation">Friend Recommendation</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="workPreference">Work Preference</label>
+                                    <select class="form-control" id="workPreference" name="work_preference" required>
+                                        <option value="">Select Preference</option>
+                                        <option value="Work from home 100%">Work from home 100%</option>
+                                        <option value="Work at office 100%">Work at office 100%</option>
+                                        <option value="Hybrid">Hybrid</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="btn" id="prevStep3">Previous</button>
+                            <button type="submit" class="btn" id="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
